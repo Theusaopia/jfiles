@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="771.0" prefWidth="1150.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox layoutY="-2.0" prefHeight="771.0" prefWidth="308.0" style="-fx-background-color: #3F2B63;" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane prefHeight="144.0" prefWidth="308.0">
+               <children>
+                  <ImageView fitHeight="60.0" fitWidth="66.0" layoutX="82.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../imgs/icone_pasta_90.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="142.0" layoutY="54.0" text="JFiles" textFill="WHITE">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Button alignment="BASELINE_LEFT" graphicTextGap="7.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="308.0" stylesheets="@../styles/style.css" text="Manager de Vídeos" textFill="WHITE">
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+               <font>
+                  <Font name="Segoe UI" size="14.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="TV" size="20" />
+               </graphic>
+            </Button>
+            <Button alignment="BASELINE_LEFT" graphicTextGap="10.0" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="308.0" stylesheets="@../styles/style.css" text="Manager de Imagens" textFill="WHITE">
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+               <font>
+                  <Font name="Segoe UI" size="14.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="IMAGE" size="20" />
+               </graphic>
+            </Button>
+            <Button alignment="BASELINE_LEFT" graphicTextGap="18.0" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="308.0" stylesheets="@../styles/style.css" text="Manager de Áudios" textFill="WHITE">
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+               <font>
+                  <Font name="Segoe UI" size="14.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="#fffdfd" glyphName="MICROPHONE" size="20" />
+               </graphic>
+            </Button>
+         </children></VBox>
+   </children>
+</AnchorPane>
