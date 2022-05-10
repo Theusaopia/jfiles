@@ -52,7 +52,7 @@
                   <FontAwesomeIconView fill="WHITE" glyphName="IMAGE" size="20" />
                </graphic>
             </Button>
-            <Button alignment="BASELINE_LEFT" graphicTextGap="18.0" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="308.0" stylesheets="@../styles/style.css" text="Manager de Áudios" textFill="WHITE">
+            <Button alignment="BASELINE_LEFT" graphicTextGap="18.0" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#actionManagerAudio" prefHeight="47.0" prefWidth="308.0" stylesheets="@../styles/style.css" text="Manager de Áudios" textFill="WHITE">
                <padding>
                   <Insets left="50.0" />
                </padding>
@@ -64,6 +64,13 @@
                </graphic>
             </Button>
          </children></VBox>
-      <StackPane fx:id="mainPanel" layoutX="309.0" layoutY="1.0" prefHeight="771.0" prefWidth="842.0" />
+      <StackPane fx:id="mainPanel" layoutX="309.0" layoutY="1.0" prefHeight="771.0" prefWidth="842.0">
+         <children>
+            <Label fx:id="labelKanyeRest" contentDisplay="CENTER" text="Label" textAlignment="JUSTIFY" wrapText="true">
+               <font>
+                  <Font name="Segoe UI Italic" size="24.0" />
+               </font>
+            </Label>
+         </children></StackPane>
    </children>
 </AnchorPane>
