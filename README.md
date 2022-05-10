@@ -13,5 +13,5 @@ TODO:
 - Vídeos: implementar upload de arquivo de vídeo, contendo um botão de play/pause
 - Imagens: implementar upload de imagem com informações sobre o arquivo, botão para envio na aws e no WhatsApp
 - Audio: implementar upload de arquivo de audio, com um player e indicador de progresso do som.
-- Tela inicial: colocar alguma info na tela inicial (ideia: usar API do kanye west que gera uma frase aleatoria a cada request)
+- Tela inicial: colocar alguma info na tela inicial (ideia: usar API do kanye west que gera uma frase aleatoria a cada request) -  CHECK
 - Gerar executavel
