@@ -1,13 +1,13 @@
 package br.edu.utfpr.jfile.util;
 
-public class KanyeRest {
+public class KanyeWestApi {
     private String quote;
 
-    public KanyeRest() {
+    public KanyeWestApi() {
 
     }
 
-    public KanyeRest(String quote) {
+    public KanyeWestApi(String quote) {
         this.quote = quote;
     }
 
