@@ -1,13 +1,16 @@
 package br.edu.utfpr.jfile;
 
-import br.edu.utfpr.jfile.util.AlertBuilder;
+import br.edu.utfpr.jfile.util.AlertMaker;
+import br.edu.utfpr.jfile.util.AmazonService;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
 import javafx.stage.FileChooser;
 
@@ -15,6 +18,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.io.File;
 import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
 
 public class PageImage {
     @FXML
@@ -29,6 +34,9 @@ public class PageImage {
     @FXML
     private Button btnGoToDirectory;
 
+    @FXML
+    private Label amazonLink;
+
     File selectedFile = null;
 
     @FXML
@@ -38,6 +46,18 @@ public class PageImage {
        imageContainer.setImage(null);
        imageInfo.setText("Informação da imagem");
        btnGoToDirectory.setVisible(false);
+
+       amazonLink.setOnMouseClicked(new EventHandler<MouseEvent>() {
+           @Override
+           public void handle(MouseEvent mouseEvent) {
+               try {
+                   URI uri = new URI(amazonLink.getText());
+                   Desktop.getDesktop().browse(uri);
+               } catch (URISyntaxException | IOException e) {
+                   AlertMaker.generateNewAlert(Alert.AlertType.ERROR, "Houve um problema ao acessar o link", "Erro");
+               }
+           }
+       });
 
        if(selectedFile != null) {
            selectedFile = null;
@@ -64,7 +84,7 @@ public class PageImage {
 
     public boolean validateImageSize(Image image) {
         if(image.getWidth() > 834 || image.getHeight() > 680) {
-            AlertBuilder.generateNewAlert(Alert.AlertType.ERROR, "Imagem muito grande!!", "Error" ).show();
+            AlertMaker.generateNewAlert(Alert.AlertType.ERROR, "Imagem muito grande!!", "Error" ).show();
             return true;
         }
         return false;
@@ -96,6 +116,15 @@ public class PageImage {
             }
         }catch(IOException ex) {
 
+        }
+    }
+
+    public void actionSendToAmazon(ActionEvent event) {
+        try {
+           amazonLink.setText(AmazonService.uploadFile(selectedFile));
+           AlertMaker.generateNewAlert(Alert.AlertType.INFORMATION, "Arquivo importado para a Amazon!", "INFO").show();
+        }catch (Exception ex) {
+            AlertMaker.generateNewAlert(Alert.AlertType.ERROR, "Erro ao importar para a amazon", "Erro").show();
         }
     }
 }

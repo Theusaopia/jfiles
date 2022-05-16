@@ -20,12 +20,7 @@
             <ImageView fx:id="imageContainer" fitHeight="678.0" fitWidth="832.0" pickOnBounds="true" preserveRatio="true" />
          </children>
       </HBox>
-      <Button layoutX="675.0" layoutY="712.0" mnemonicParsing="false" onAction="#actionUploadFile" prefHeight="45.0" prefWidth="58.0" style="-fx-background-color: #3F2B63;" textFill="WHITE">
-         <font>
-            <Font name="Segoe UI" size="14.0" />
-         </font>
-      </Button>
-      <Button layoutX="612.0" layoutY="712.0" mnemonicParsing="false" onAction="#actionUploadFile" prefHeight="45.0" prefWidth="58.0" style="-fx-background-color: #3F2B63;" textFill="WHITE">
+      <Button layoutX="675.0" layoutY="712.0" mnemonicParsing="false" onAction="#actionSendToAmazon" prefHeight="45.0" prefWidth="58.0" style="-fx-background-color: #3F2B63;" textFill="WHITE">
          <font>
             <Font name="Segoe UI" size="14.0" />
          </font>
@@ -37,10 +32,15 @@
             <Font name="Segoe UI Bold" size="14.0" />
          </font>
       </Label>
-      <Button fx:id="btnGoToDirectory" layoutX="523.0" layoutY="712.0" mnemonicParsing="false" onAction="#actionGoToDirectory" prefHeight="45.0" prefWidth="104.0" style="-fx-background-color: #3F2B63;" text="Ir para pasta" textFill="WHITE" AnchorPane.rightAnchor="237.0">
+      <Button fx:id="btnGoToDirectory" layoutX="565.0" layoutY="712.0" mnemonicParsing="false" onAction="#actionGoToDirectory" prefHeight="45.0" prefWidth="104.0" style="-fx-background-color: #3F2B63;" text="Ir para pasta" textFill="WHITE" AnchorPane.rightAnchor="173.0">
          <font>
             <Font name="Segoe UI" size="14.0" />
          </font>
       </Button>
+      <Label fx:id="amazonLink" layoutX="14.0" layoutY="694.0" text="Link Amazon">
+         <font>
+            <Font name="Segoe UI Bold" size="14.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
