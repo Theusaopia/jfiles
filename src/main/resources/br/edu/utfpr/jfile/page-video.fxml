@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Slider?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.media.MediaView?>
 <?import javafx.scene.text.Font?>
-
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="771.0" prefWidth="842.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.utfpr.jfile.PageVideo">
    <children>
@@ -12,5 +14,25 @@
             <Font name="Segoe UI" size="14.0" />
          </font>
       </Button>
+      <MediaView fx:id="videoPlayer" fitHeight="500.0" fitWidth="815.0" layoutX="14.0" layoutY="14.0" />
+      <Button layoutX="333.0" layoutY="522.0" mnemonicParsing="false" onAction="#actionPlayVideo" prefHeight="45.0" prefWidth="47.0" style="-fx-background-color: #3F2B63;" textFill="WHITE">
+         <font>
+            <Font name="Segoe UI" size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="388.0" layoutY="522.0" mnemonicParsing="false" onAction="#actionPauseVideo" prefHeight="45.0" prefWidth="47.0" style="-fx-background-color: #3F2B63;" textFill="WHITE">
+         <font>
+            <Font name="Segoe UI" size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="442.0" layoutY="522.0" mnemonicParsing="false" onAction="#actionResetVideo" prefHeight="45.0" prefWidth="47.0" style="-fx-background-color: #3F2B63;" textFill="WHITE">
+         <font>
+            <Font name="Segoe UI" size="14.0" />
+         </font>
+      </Button>
+      <FontAwesomeIconView fill="WHITE" glyphName="PLAY" layoutX="347.0" layoutY="553.0" size="25" />
+      <FontAwesomeIconView fill="WHITE" glyphName="PAUSE" layoutX="401.0" layoutY="553.0" size="25" />
+      <FontAwesomeIconView fill="WHITE" glyphName="REPLY" layoutX="453.0" layoutY="553.0" size="25" />
+      <Slider fx:id="volumeSlider" layoutX="342.0" layoutY="577.0" />
    </children>
 </AnchorPane>
