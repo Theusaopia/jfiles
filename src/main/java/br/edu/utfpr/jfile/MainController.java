@@ -1,6 +1,6 @@
 package br.edu.utfpr.jfile;
 
-import br.edu.utfpr.jfile.util.KanyeRest;
+import br.edu.utfpr.jfile.util.KanyeWestApi;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import javafx.event.ActionEvent;
@@ -77,7 +77,7 @@ public class MainController {
     public String getKanyeRestQuote(String responseFromKanyeApi) throws JsonProcessingException {
         String stringResponse = responseFromKanyeApi;
         ObjectMapper mapper = new ObjectMapper();
-        KanyeRest kanyeRestResponseObj = mapper.readValue(stringResponse, KanyeRest.class);
+        KanyeWestApi kanyeRestResponseObj = mapper.readValue(stringResponse, KanyeWestApi.class);
 
         return kanyeRestResponseObj.getQuote();
     }
