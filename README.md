@@ -15,3 +15,5 @@ TODO:
 - Audio: implementar upload de arquivo de audio, com um player e indicador de progresso do som.
 - Tela inicial: colocar alguma info na tela inicial (ideia: usar API do kanye west que gera uma frase aleatoria a cada request) -  CHECK
 - Gerar executavel
+
+Link para download da documentação e jar: https://drive.google.com/file/d/1P2fzBCFKnNfH8wDCMPVxG8f7s7XMXGjX/view?usp=sharing
